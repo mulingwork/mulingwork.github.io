@@ -4,6 +4,9 @@
     .container {
         width: 95%;
     }
+    .logo-span{
+        font-size: 1.25rem !important;
+    }
 }
 
 /*中等屏幕下(平板类)的样式*/
