@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo 快速搭建博客, MuLing">
+    <meta name="keywords" content="使用Axios访问API, MuLing">
     <meta name="description" content="记录自己的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo 快速搭建博客 | MuLing&#39;s Blog</title>
+    <title>使用Axios访问API | MuLing&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo 快速搭建博客</h1>
+                    <h1 class="description center-align post-title">使用Axios访问API</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,16 @@
                                 <span class="chip bg-color">工具</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                                <span class="chip bg-color">博客</span>
+                            <a href="/tags/JavaScript/">
+                                <span class="chip bg-color">JavaScript</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%B1%BB%E5%BA%93/">
+                                <span class="chip bg-color">类库</span>
+                            </a>
+                        
+                            <a href="/tags/HTTP/">
+                                <span class="chip bg-color">HTTP</span>
                             </a>
                         
                     </div>
@@ -448,28 +456,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    157
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -485,66 +493,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-博客搭建"><a href="#Hexo-博客搭建" class="headerlink" title="Hexo 博客搭建"></a>Hexo 博客搭建</h1><blockquote>
-<p>使用 Hexo 来快速搭建一个高效且美观静态的博客，可以直接使用Markdown语法来直接书写你的博客，并且托管在 GitHub 上。</p>
+                <h1 id="Axios基本使用"><a href="#Axios基本使用" class="headerlink" title="Axios基本使用"></a>Axios基本使用</h1><blockquote>
+<p>有很多时候你在构建应用时需要访问一个 API 并展示其数据。做这件事的方法有好几种，而使用基于 promise 的 HTTP 客户端 axios 则是其中非常流行的一种。</p>
 </blockquote>
 <a id="more"></a>
 
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>[ x ] 安装 node.js</li>
-<li>[ x ] 安装 git</li>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ul>
+<li><a href="https://api.coindesk.com/v1/bpi/currentprice.json" target="_blank" rel="noopener">测试请求的链接</a></li>
 </ul>
-<blockquote>
-<p>如果像要使用 Hexo 来搭建博客，那 node.js 是必须的，如果需要能在线上访问，并且不想花钱，那么git也是必要的<br>本篇不概述 node.js 与 git 的安装方式，官网链接：<a href="http://nodejs.org/" target="_blank" rel="noopener">node.js</a>、<a href="http://git-scm.com/" target="_blank" rel="noopener">git</a></p>
-</blockquote>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在你硬盘上的任意位置新建一个你博客的存放目录</p>
-<p><img src="./img/01.png" alt=""></p>
-<p>然后进入这个文件夹</p>
-<p><img src="./img/02.png" alt=""></p>
-<p>在箭头所指的位置单击然后输入 <code>cmd</code> 按回车，就可以 以当前目录结构打开命令行窗口</p>
-<p>然后在命令行中输入如下命令安装 Hexo</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i axios</span><br></pre></td></tr></table></figure>
+<p>或者使用CDN</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>安装完成之后，在继续输入如下命令，用来创建你的博客</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init 博客名称</span><br></pre></td></tr></table></figure>
-
-<p>随后你就可以看到如下目录结构</p>
-<p><img src="./img/03.png" alt=""></p>
-<p>恭喜你到这里你已经完成了 80% 了，是不是十分的简单~</p>
-<h3 id="发布你的第一篇博客"><a href="#发布你的第一篇博客" class="headerlink" title="发布你的第一篇博客"></a>发布你的第一篇博客</h3><p>紧接着你就可以继续在命令行中输入以下内容来创建一篇博客</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n '文章名称'</span><br></pre></td></tr></table></figure>
-
-<p>文章就生成在了当前目录下的 source 文件夹下的 _posts 目录下，你的所有文章今后都是存放在这的</p>
-<p><img src="./img/04.png" alt=""></p>
-<p>这个以<code>.md</code> 后缀结尾的就是我们刚创建的文章了，默认它是自带一篇 hello-world 的文章的，你可以把它给删掉<br>不过在删掉之前我们先来书写一下我们的文章内容把</p>
-<p>打开那个刚刚创建的文件，然后就可以开始书写你的文章内容了，语法格式的话是 Markdown，你可以下载 Typora 这款软件来对它进行编辑，当然普通记事本也是可以的，这里就不多做介绍了</p>
-<p><img src="./img/05.png" alt=""></p>
-<p>看到如下内容，它们分别对应着，文章标题，文章创建时间，和标签，然后你就可以在它们的下方进行书写 Markdown 语法了</p>
-<p><img src="./img/06.png" alt=""></p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></span><br><span class="line">这个标签的对应着显示更多，如果不写，默认在首页的时候我们可以看到完整的博客内容，写了的话就代表着只能看到标签前边的内容，想看更多则需要点击文章进入</span><br></pre></td></tr></table></figure>
-
-<p>好的自此我们已经书写好了文章，那让我们来开始预览一下吧，在命令行中继续输入如下命令</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 将我们刚写的博客生成为静态页面，也就是一张普通HTML的网页</span><br><span class="line">hexo g 或者 hexo generate</span><br><span class="line"></span><br><span class="line">// 开启服务器，这样我们就能在浏览器中访问我们的博客了</span><br><span class="line">hexo s 或者 hexo server</span><br></pre></td></tr></table></figure>
-
-<p>然后你在浏览器中输入 localhost:4000 就可以看到我们的博客页面了</p>
-<p><img src="./img/07.png" alt=""></p>
-<p>好的你已经完成了你的博客的搭建与文章书写</p>
-<h3 id="博客信息配置"><a href="#博客信息配置" class="headerlink" title="博客信息配置"></a>博客信息配置</h3><p>博客是英文的，标题也不喜欢等等，这些都是可以修改的，在你的博客根目录，打开 _config 文件，这个文件就是用来配置你的博客网站信息的<br>下面是大概的配置</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 博客标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 网站描述</span><br><span class="line">keywords: 关键词</span><br><span class="line">author: 作者</span><br><span class="line">language: zh <span class="comment">//这个是语言</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><blockquote>
-<p>博客是搭建完成了，但是不喜欢这个主题风格怎么办，没关系我们可以去下载一个喜欢的风格来进行装饰<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a></p>
-</blockquote>
-<p>进入 themes 文件夹目录下执行以下命令来下载主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git matery</span><br></pre></td></tr></table></figure>
-
-<p>下载完成后在打开之前根目录下配置博客的那个文件 _config.yml 将里面的 theme 修改为你的主题的名称</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: matery</span><br></pre></td></tr></table></figure>
-
-<p>然后重新生成博客并且开启服务器</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>undone…</p>
+<h4 id="GET-请求"><a href="#GET-请求" class="headerlink" title="GET 请求"></a>GET 请求</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 最简单的访问方式</span></span><br><span class="line">axios</span><br><span class="line">    .get(<span class="string">'https://api.coindesk.com/v1/bpi/currentprice.json'</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">console</span>.log(response)))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// GET传参</span></span><br><span class="line">axios.get(<span class="string">'/user'</span>, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">      ID: <span class="number">12345</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> </li>
+</ul>
 
             </div>
             <hr/>
@@ -570,7 +534,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://mulingwork.github.io/2020/03/29/Hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">http://mulingwork.github.io/2020/03/29/Hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://mulingwork.github.io/2020/03/30/%E4%BD%BF%E7%94%A8Axios%E8%AE%BF%E9%97%AEAPI/">http://mulingwork.github.io/2020/03/30/%E4%BD%BF%E7%94%A8Axios%E8%AE%BF%E9%97%AEAPI/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -612,8 +576,16 @@
                                     <span class="chip bg-color">工具</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                                    <span class="chip bg-color">博客</span>
+                                <a href="/tags/JavaScript/">
+                                    <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%B1%BB%E5%BA%93/">
+                                    <span class="chip bg-color">类库</span>
+                                </a>
+                            
+                                <a href="/tags/HTTP/">
+                                    <span class="chip bg-color">HTTP</span>
                                 </a>
                             
                         </div>
@@ -658,27 +630,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/03/30/%E4%BD%BF%E7%94%A8Axios%E8%AE%BF%E9%97%AEAPI/">
+                <a href="/2020/03/30/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="使用Axios访问API">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Git基本使用">
                         
-                        <span class="card-title">使用Axios访问API</span>
+                        <span class="card-title">Git基本使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Axios基本使用
-有很多时候你在构建应用时需要访问一个 API 并展示其数据。做这件事的方法有好几种，而使用基于 promise 的 HTTP 客户端 axios 则是其中非常流行的一种。
-
-
-
-准备
-测试请求的链接
-
-开始安装1npm 
+                            版本控制集中式版本控制SVN 因为每次存的都是差异，需要的硬盘空间相对会小一点，可是回滚速度会很慢优点：    代码存放在单一的服务器上 便于项目的管理缺点：    服务器宕机：员工写的代码得不到保障    服务器炸了：整个项目的历史记录都
                         
                     </div>
                     <div class="publish-info">
@@ -700,18 +664,6 @@
                         <span class="chip bg-color">工具</span>
                     </a>
                     
-                    <a href="/tags/JavaScript/">
-                        <span class="chip bg-color">JavaScript</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%B1%BB%E5%BA%93/">
-                        <span class="chip bg-color">类库</span>
-                    </a>
-                    
-                    <a href="/tags/HTTP/">
-                        <span class="chip bg-color">HTTP</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -723,20 +675,29 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/03/29/Less%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/">
+                <a href="/2020/03/29/Hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Less简单入门">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo 快速搭建博客">
                         
-                        <span class="card-title">Less简单入门</span>
+                        <span class="card-title">Hexo 快速搭建博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Less 简单入门
-LESS 将 CSS 赋予了动态语言的特性，如 变量， 继承， 运算， 函数. LESS 既可以在 客户端 上运行 (支持IE6+, Webkit, Firefox)，也可以借助Node.js或者Rhino在服务端运行。
+                            Hexo 博客搭建
+使用 Hexo 来快速搭建一个高效且美观静态的博客，可以直接使用Markdown语法来直接书写你的博客，并且托管在 GitHub 上。
+
+
+
+环境准备
+[ x ] 安装 node.js
+[ x ] 安装 git
+
+
+如果
                         
                     </div>
                     <div class="publish-info">
@@ -754,12 +715,12 @@ LESS 将 CSS 赋予了动态语言的特性，如 变量， 继承， 运算， 
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Less/">
-                        <span class="chip bg-color">Less</span>
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
                     </a>
                     
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
+                    <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo 快速搭建博客, MuLing">
+    <meta name="keywords" content="Git基本使用, MuLing">
     <meta name="description" content="记录自己的点点滴滴">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo 快速搭建博客 | MuLing&#39;s Blog</title>
+    <title>Git基本使用 | MuLing&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo 快速搭建博客</h1>
+                    <h1 class="description center-align post-title">Git基本使用</h1>
                 </div>
             </div>
         </div>
@@ -432,10 +432,6 @@
                                 <span class="chip bg-color">工具</span>
                             </a>
                         
-                            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                                <span class="chip bg-color">博客</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -448,28 +444,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-03-29
+                    2020-03-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    5 分
                 </div>
                 
 
@@ -485,66 +481,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-博客搭建"><a href="#Hexo-博客搭建" class="headerlink" title="Hexo 博客搭建"></a>Hexo 博客搭建</h1><blockquote>
-<p>使用 Hexo 来快速搭建一个高效且美观静态的博客，可以直接使用Markdown语法来直接书写你的博客，并且托管在 GitHub 上。</p>
-</blockquote>
-<a id="more"></a>
+                <h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h4 id="集中式版本控制"><a href="#集中式版本控制" class="headerlink" title="集中式版本控制"></a>集中式版本控制</h4><p>SVN 因为每次存的都是差异，需要的硬盘空间相对会小一点，可是回滚速度会很慢<br>优点：<br>    代码存放在单一的服务器上 便于项目的管理<br>缺点：<br>    服务器宕机：员工写的代码得不到保障<br>    服务器炸了：整个项目的历史记录都会丢失</p>
+<h4 id="分布式版本控制"><a href="#分布式版本控制" class="headerlink" title="分布式版本控制"></a>分布式版本控制</h4><p>Git 每次存的都是项目的完整快照 需要的硬盘空间会相对大一点<br>    但是 Git 团队对代码做了极致的压缩 最终需要的实际空间比 SVN 多不了多少 可是 Git 的回滚速度极快<br>优点：<br>    完全的分布式<br>缺点：<br>    学习起来比SVN陡峭</p>
+<h2 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h2><p>安装好后可以使用 <code>git --version</code> 来查看当前git版本</p>
+<h2 id="Git-初始化配置"><a href="#Git-初始化配置" class="headerlink" title="Git 初始化配置"></a>Git 初始化配置</h2><p>用户信息配置</p>
+<p>首先要配置的是你的个人用户名和电子邮件地址，每次Git提交的时候都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录</p>
+<p><code>git config user.name &quot;你的用户名字&quot;</code>这条命令用于配置你的用户名，可以简单的理解为作者的名字<br><code>git config user.email &quot;你的邮箱&quot;</code> 这条命令用于配置你的邮箱，当代码出现问题后，被别人发现别人可以通过这个邮箱来联系你（其实压根没人会联系你:)）</p>
+<p>以上两条命令是必须配置的</p>
+<p>当然这个配置还有两个参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">git config --system user.name <span class="string">"用户名"</span></span><br><span class="line">git config --ststem user.email <span class="string">"邮箱"</span></span><br><span class="line"></span><br><span class="line">--system 表示当前系统中所有用户都普遍适用的配置</span><br><span class="line"></span><br><span class="line">git config --global user.name <span class="string">"用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"邮箱"</span></span><br><span class="line"></span><br><span class="line">--global选项表示用户目录下的配置文件，适用于该用户</span><br><span class="line"></span><br><span class="line">如果不加任何参数的话就是适用于当前项目，仅仅针对当前项目有效</span><br><span class="line"></span><br><span class="line">git使用配置的优先级为 项目配置&gt;用户配置&gt;系统配置</span><br><span class="line"></span><br><span class="line">这几个文件的路径分别为</span><br><span class="line">/etc/gitconfig</span><br><span class="line">~/.gitconfig</span><br><span class="line">.git/config （也就是项目内的那个文件）</span><br></pre></td></tr></table></figure>
 
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
-<li>[ x ] 安装 node.js</li>
-<li>[ x ] 安装 git</li>
+<p>可以使用 <code>git config --list</code> 来查看是否已经配置好了 </p>
+<p>Git 高层命令<br>git init 初始化仓库<br>git status 查看当前文件状态<br>git add ./ 将修改添加到暂存区</p>
+<p>git diff</p>
+<p>git log<br>git log –oneline<br>git log –oneline –decorate –graph –all</p>
+<p>git rm 文件名 删除工作目录中对应文件，在将其添加到暂存区<br>git mv 文件名 新文件名 将工作目录中的文件重命名，在将其添加到暂存区</p>
+<p>git commit -m “注释” 将暂存区提交到版本库<br>git commit -a 跳过暂存区<br>git commit –amend</p>
+<p>Git 底层命令</p>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>git branch 显示分支列表<br>git branch 分支名 创建分支<br>git branch -v 查看分支指向的最新的提交<br>git checkout 分支名 切换分支<br>git branch name 加哈希 即可新建分支并将分支指向之前提交的对象</p>
+<p>git branch -d 分支名 删除分支（不过你不能处于你要删除的分支上）<br>git branch -D 分支名 强制删除分支</p>
+<h2 id="Git存储"><a href="#Git存储" class="headerlink" title="Git存储"></a>Git存储</h2><p>git stash 存储<br>git stash apply 应用存储<br>git stash list 查看存储<br>git stash drop stash{0} 删除存储<br>git stash pop stash(0) 应用存储然后删除存储</p>
+<h2 id="撤销重置"><a href="#撤销重置" class="headerlink" title="撤销重置"></a>撤销重置</h2><p>git checkout –filename<br>git reset damu.txt</p>
+<h2 id="Git-TAG"><a href="#Git-TAG" class="headerlink" title="Git TAG"></a>Git TAG</h2><p>git tag 标签名 加哈希   打标签<br>git show 加标签        查看标签<br>git tag -d 加标签名    删除标签</p>
+<p>git checkout -b “标签名” 在特定标签上新建分支</p>
+<h2 id="Git别名配置"><a href="#Git别名配置" class="headerlink" title="Git别名配置"></a>Git别名配置</h2><p>如果不想每次都输入完整的 Git 命令，可以通过 git config 文件可以轻松的为每一个命令配置一个别名<br>git config –global alias.别名 命令<br>列如<br>git config –global alias.st status<br>这时候使用 git st 就相当于 git status了</p>
+<h2 id="Git目录"><a href="#Git目录" class="headerlink" title="Git目录"></a>Git目录</h2><p>hooks 目录包含客户端或服务端的钩子脚本<br>info 包含一个全局性排除文件<br>logs 保存日志信息<br>objects 目录存储所有数据内容<br>refs 目录存储指向数据（分支）的提交对象的指针<br>config 文件包含目录特有的配置选项<br>description 用来显示对仓库的描述信息<br>HEAD 文件指示目前被检出的分支<br>index 文件暂存区信息</p>
+<h2 id="H5是个啥"><a href="#H5是个啥" class="headerlink" title="H5是个啥"></a>H5是个啥</h2><blockquote>
+<p> <strong>H5 这个词，可以理解成就是混合 App 模型，只不过它特指混合 App 的前端部分。</strong> 因为混合 App 的前端就是 HTML5 网页，所以简称 H5。这个词是国内独有的，基本上都是前端程序员在用，国外不用这个词，就直接叫混合 App。 </p>
+</blockquote>
+<ul>
+<li>原生应用（native application，简称 native App）</li>
+<li>Web 应用（web application，简称 Web App）</li>
+<li>混合应用（hybrid application，简称 hybrid App）</li>
 </ul>
-<blockquote>
-<p>如果像要使用 Hexo 来搭建博客，那 node.js 是必须的，如果需要能在线上访问，并且不想花钱，那么git也是必要的<br>本篇不概述 node.js 与 git 的安装方式，官网链接：<a href="http://nodejs.org/" target="_blank" rel="noopener">node.js</a>、<a href="http://git-scm.com/" target="_blank" rel="noopener">git</a></p>
-</blockquote>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在你硬盘上的任意位置新建一个你博客的存放目录</p>
-<p><img src="./img/01.png" alt=""></p>
-<p>然后进入这个文件夹</p>
-<p><img src="./img/02.png" alt=""></p>
-<p>在箭头所指的位置单击然后输入 <code>cmd</code> 按回车，就可以 以当前目录结构打开命令行窗口</p>
-<p>然后在命令行中输入如下命令安装 Hexo</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>安装完成之后，在继续输入如下命令，用来创建你的博客</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init 博客名称</span><br></pre></td></tr></table></figure>
-
-<p>随后你就可以看到如下目录结构</p>
-<p><img src="./img/03.png" alt=""></p>
-<p>恭喜你到这里你已经完成了 80% 了，是不是十分的简单~</p>
-<h3 id="发布你的第一篇博客"><a href="#发布你的第一篇博客" class="headerlink" title="发布你的第一篇博客"></a>发布你的第一篇博客</h3><p>紧接着你就可以继续在命令行中输入以下内容来创建一篇博客</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n '文章名称'</span><br></pre></td></tr></table></figure>
-
-<p>文章就生成在了当前目录下的 source 文件夹下的 _posts 目录下，你的所有文章今后都是存放在这的</p>
-<p><img src="./img/04.png" alt=""></p>
-<p>这个以<code>.md</code> 后缀结尾的就是我们刚创建的文章了，默认它是自带一篇 hello-world 的文章的，你可以把它给删掉<br>不过在删掉之前我们先来书写一下我们的文章内容把</p>
-<p>打开那个刚刚创建的文件，然后就可以开始书写你的文章内容了，语法格式的话是 Markdown，你可以下载 Typora 这款软件来对它进行编辑，当然普通记事本也是可以的，这里就不多做介绍了</p>
-<p><img src="./img/05.png" alt=""></p>
-<p>看到如下内容，它们分别对应着，文章标题，文章创建时间，和标签，然后你就可以在它们的下方进行书写 Markdown 语法了</p>
-<p><img src="./img/06.png" alt=""></p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- more --&gt;</span></span></span><br><span class="line">这个标签的对应着显示更多，如果不写，默认在首页的时候我们可以看到完整的博客内容，写了的话就代表着只能看到标签前边的内容，想看更多则需要点击文章进入</span><br></pre></td></tr></table></figure>
-
-<p>好的自此我们已经书写好了文章，那让我们来开始预览一下吧，在命令行中继续输入如下命令</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 将我们刚写的博客生成为静态页面，也就是一张普通HTML的网页</span><br><span class="line">hexo g 或者 hexo generate</span><br><span class="line"></span><br><span class="line">// 开启服务器，这样我们就能在浏览器中访问我们的博客了</span><br><span class="line">hexo s 或者 hexo server</span><br></pre></td></tr></table></figure>
-
-<p>然后你在浏览器中输入 localhost:4000 就可以看到我们的博客页面了</p>
-<p><img src="./img/07.png" alt=""></p>
-<p>好的你已经完成了你的博客的搭建与文章书写</p>
-<h3 id="博客信息配置"><a href="#博客信息配置" class="headerlink" title="博客信息配置"></a>博客信息配置</h3><p>博客是英文的，标题也不喜欢等等，这些都是可以修改的，在你的博客根目录，打开 _config 文件，这个文件就是用来配置你的博客网站信息的<br>下面是大概的配置</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 博客标题</span><br><span class="line">subtitle: 副标题</span><br><span class="line">description: 网站描述</span><br><span class="line">keywords: 关键词</span><br><span class="line">author: 作者</span><br><span class="line">language: zh <span class="comment">//这个是语言</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="美化"><a href="#美化" class="headerlink" title="美化"></a>美化</h2><blockquote>
-<p>博客是搭建完成了，但是不喜欢这个主题风格怎么办，没关系我们可以去下载一个喜欢的风格来进行装饰<br><a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo主题</a></p>
-</blockquote>
-<p>进入 themes 文件夹目录下执行以下命令来下载主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;blinkfox&#x2F;hexo-theme-matery.git matery</span><br></pre></td></tr></table></figure>
-
-<p>下载完成后在打开之前根目录下配置博客的那个文件 _config.yml 将里面的 theme 修改为你的主题的名称</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: matery</span><br></pre></td></tr></table></figure>
-
-<p>然后重新生成博客并且开启服务器</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>undone…</p>
+<h2 id="PWA又是个啥"><a href="#PWA又是个啥" class="headerlink" title="PWA又是个啥"></a>PWA又是个啥</h2><p>为了推广 Web App，谷歌公司的 Chrome 浏览器团队做了很多努力。他们认为，Web App 足以满足大多数 App 的需求，但是三大缺陷阻碍它的推广。</p>
+<ol>
+<li>不能从手机的首屏直接进入。</li>
+<li>缺乏手机状态栏和锁屏时的通知推送能力。</li>
+<li>不支持脱机访问（即断网也能使用）。</li>
+</ol>
 
             </div>
             <hr/>
@@ -570,7 +545,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://mulingwork.github.io/2020/03/29/Hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">http://mulingwork.github.io/2020/03/29/Hexo-%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="http://mulingwork.github.io/2020/03/30/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">http://mulingwork.github.io/2020/03/30/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -612,10 +587,6 @@
                                     <span class="chip bg-color">工具</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                                    <span class="chip bg-color">博客</span>
-                                </a>
-                            
                         </div>
                     
                 </div>
@@ -654,9 +625,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/03/30/Git%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Git基本使用">
+                        
+                        <span class="card-title">Git基本使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            版本控制集中式版本控制SVN 因为每次存的都是差异，需要的硬盘空间相对会小一点，可是回滚速度会很慢优点：    代码存放在单一的服务器上 便于项目的管理缺点：    服务器宕机：员工写的代码得不到保障    服务器炸了：整个项目的历史记录都
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            MuLing
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/03/30/%E4%BD%BF%E7%94%A8Axios%E8%AE%BF%E9%97%AEAPI/">
                     <div class="card-image">
@@ -682,9 +700,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -710,56 +728,6 @@
                     
                     <a href="/tags/HTTP/">
                         <span class="chip bg-color">HTTP</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/29/Less%E7%AE%80%E5%8D%95%E5%85%A5%E9%97%A8/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Less简单入门">
-                        
-                        <span class="card-title">Less简单入门</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Less 简单入门
-LESS 将 CSS 赋予了动态语言的特性，如 变量， 继承， 运算， 函数. LESS 既可以在 客户端 上运行 (支持IE6+, Webkit, Firefox)，也可以借助Node.js或者Rhino在服务端运行。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-29
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            MuLing
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Less/">
-                        <span class="chip bg-color">Less</span>
-                    </a>
-                    
-                    <a href="/tags/CSS/">
-                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>
